@@ -1,0 +1,37 @@
+{
+  "_id": {
+    "$oid": "5f19563c1b3bc5cfeee89778"
+  },
+  "titre": "Retour vers le futur",
+  "diree": 180.0
+}
+{
+  "_id": {
+    "$oid": "5f1957d31b3bc5cfeee89779"
+  },
+  "titre": "Madmax",
+  "duree": 240.0
+}
+{
+  "_id": {
+    "$oid": "5f1957d31b3bc5cfeee8977a"
+  },
+  "titre": " Matrix",
+  "duree": 210.0
+}
+{
+  "_id": {
+    "$oid": "5f1959ac1b3bc5cfeee8977b"
+  },
+  "TITLE": "La soupe aux choux",
+  "annee": 1980.0
+}
+{
+  "_id": {
+    "$oid": "5f195db61b3bc5cfeee8977c"
+  },
+  "titre": "Nouveau film",
+  "created": {
+    "$date": "2020-07-23T09:51:50.607Z"
+  }
+}

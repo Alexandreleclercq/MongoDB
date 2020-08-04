@@ -1,0 +1,36 @@
+Mongo Charts
+Doc installation : https://docs.mongodb.com/charts/onprem/installation/#install-charts
+
+installer docker for windows
+lancer docker une fois l'installation terminée 
+
+Puis, dans un terminal :
+
+Choisissez un dossier de stockage:
+cd c:\devjs\
+mkdir mongodb-charts
+cd mongodb-charts
+
+Copier le fichier charts-docker-swarm-19.12.1.yml dans ce dossier
+
+docker swarm init
+
+docker pull quay.io/mongodb/charts:19.12.1
+
+docker run --rm quay.io/mongodb/charts:19.12.1 charts-cli test-connection mongodb://host.docker.internal
+
+echo "mongodb://host.docker.internal" | docker secret create charts-mongodb-uri -
+
+Ca vous renvoie quelque chose du style : s94lca6mfwfjatojb3ia2hi18
+
+docker stack deploy -c charts-docker-swarm-19.12.1.yml mongodb-charts
+
+docker service ls
+
+docker exec -it `
+  $(docker container ls --filter name=_charts -q) `
+  charts-cli add-user --first-name "Christophe" --last-name "Ollivier" `
+  --email "christophe@yopmail.com" --password "123456" `
+  --role "UserAdmin"
+  
+Dans un navigateur, aller à l'adresse : http://localhost:80
